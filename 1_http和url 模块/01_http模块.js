@@ -1,6 +1,8 @@
 //Node  创建第一个应用
 /**
  *  http 服务
+ *       api
+ *          http.createSercer(fun( req , res) {})
  */
 
 var http = require('http')          //  1. 引入

@@ -26,7 +26,7 @@ var server = http.createServer(function (req, res) {
 
 		var result = url.parse(req.url, true) //第二个参数如果为 true 则返回一个查询键值对象
 
-		console.log(result.query);
+		console.log(result);
 
 	}
 
