@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Album</title>
+  <style> 
+      body{
+        margin: 0 ;
+        padding: 0 ;
+      }
+      .album {
+        font-size: 0;
+        width: 100%;
+      }
+      .album li {
+        /* float: left; */
+        display: inline-block;
+        box-sizing: border-box;
+        list-style: none;
+        border:  0 ;
+        width: 25%;
+      }
+      .album li img {
+        width: 100%;
+      }
+      .album li p {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        max-height: 20px;
+        font-weight: bold;
+        overflow: hidden
+      }
+  </style>
+</head>
+<body>
+  <ul class="album">
+  <% 
+      for(var i = 0 ; i<album.length ; i++){
+  %>
+    <li>
+      <a href = "<%= album[i].imgSrc || 'http://127.0.0.1:8002/uploads/'+album[i].text %>"+>
+          <img  src=<%= album[i].imgSrc || indexImg %> alt="">
+          <p><%= album[i].text %></p>
+      </a>
+    </li>
+  <%
+    }
+  %>  
+  </ul>
+  <script src='../js/index.js'></script>
+</body>
+</html>
